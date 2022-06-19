@@ -1,0 +1,117 @@
+#include<stdio.h>
+
+struct Account
+{
+	char name[100];
+	char idCard[19];
+	char tel[12];
+	char username[100];
+	char password[7];
+
+	float money;
+};
+typedef struct Account Account;
+
+void signUp()
+{
+	Account a;
+	printf("请输入姓名:\n");
+	scanf("%s",a.name);
+
+	printf("请输入身份证:\n");
+	scanf("%s",a.idCard);
+
+	printf("请输入电话:\n");
+	scanf("%s",a.tel);
+
+	printf("请输入账号:\n");
+	scanf("%s",a.username);
+
+	printf("请输入密码:\n");
+	scanf("%s",a.password);
+
+	a.money=0.0f;
+}
+
+void signIn()
+{
+
+}
+void signUp1()
+{
+	Account a;
+	printf("put name:\n");
+	scanf("%s",a.name);
+
+	printf("put id:\n");
+	scanf("%s",a.idCard);
+
+	printf("put tel:\n");
+	scanf("%s",a.tel);
+
+	printf("put kahao:\n");
+	scanf("%s",a.username);
+
+	printf("put mima:\n");
+	scanf("%s",a.password);
+
+	a.money=0.0f;
+}
+
+void signIn2()
+{
+
+}
+void showMenu()
+{
+	printf("开户，按1\n");
+	printf("登录，按2\n");
+	int n;
+	scanf("%d",&n);
+
+	if(n==1)
+	{
+		signUp();
+	}
+	else if(n==2)
+	{
+		signIn();
+	}
+}
+void showEnglishMenu()
+{
+	printf("kaihu,put 1\n");
+	printf("denglu,put 2\n");
+	int n;
+	scanf("%d",&n);
+
+	if(n==1)
+	{
+		signUp1();
+	}
+	else if(n==2)
+	{
+		signIn2();
+	}
+}
+
+int main()
+{
+	printf("欢迎使用XXX银行\n");
+	printf("Welcome to XXX bank\n");
+
+	int language;
+	printf("中文，按1\n");
+	printf("English, Press 2\n");
+	scanf("%d",&language);
+	if(language==1)
+	{
+		showMenu();
+	}
+	else if(language==2)
+	{
+		showEnglishMenu();
+	}
+
+	return 0;
+}
